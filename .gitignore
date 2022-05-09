@@ -160,6 +160,8 @@ buildNumber.properties
 .history
 .ionide
 
+src/main/resources/data/*.json
+
 # Support for Project snippet scope
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,intellij+all,macos,visualstudiocode
