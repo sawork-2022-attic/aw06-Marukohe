@@ -1,7 +1,7 @@
 package com.example.webpos.web;
 
 import com.example.webpos.biz.PosService;
-import com.example.model.Cart;
+import com.example.webpos.model.Cart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

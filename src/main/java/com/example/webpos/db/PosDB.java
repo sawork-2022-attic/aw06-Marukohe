@@ -1,6 +1,6 @@
-package com.example.db;
+package com.example.webpos.db;
 
-import com.example.model.Product;
+import com.example.webpos.model.Product;
 
 import java.util.List;
 

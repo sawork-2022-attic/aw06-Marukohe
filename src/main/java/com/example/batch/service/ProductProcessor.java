@@ -1,6 +1,6 @@
 package com.example.batch.service;
 
-import com.example.model.Product;
+import com.example.batch.model.Product;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.batch.core.ExitStatus;

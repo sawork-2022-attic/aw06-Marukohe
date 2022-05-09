@@ -1,9 +1,10 @@
 package com.example.batch.config;
 
-import com.example.model.Product;
+import com.example.batch.model.Product;
 import com.example.batch.service.JsonFileReader;
 import com.example.batch.service.ProductProcessor;
 import com.example.batch.service.ProductWriter;
+import com.example.batch.repository.ProductRepository;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -21,7 +22,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
@@ -34,6 +34,9 @@ public class PartitionConfig {
 
     @Autowired
     public StepBuilderFactory stepBuilderFactory;
+
+    @Autowired
+    public ProductRepository productRepository;
 
     @Bean
     public Job partitioningJob() throws Exception {
@@ -74,7 +77,7 @@ public class PartitionConfig {
 
     @Bean
     public ItemWriter<Product> itemWriter() {
-        return new ProductWriter();
+        return new ProductWriter(productRepository);
     }
 
 }
