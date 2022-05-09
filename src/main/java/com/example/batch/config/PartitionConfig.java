@@ -1,6 +1,6 @@
 package com.example.batch.config;
 
-import com.example.batch.model.Product;
+import com.example.model.Product;
 import com.example.batch.service.JsonFileReader;
 import com.example.batch.service.ProductProcessor;
 import com.example.batch.service.ProductWriter;
